@@ -19,6 +19,7 @@ function App() {
   return (
     <>
       <Button>Привет!</Button>
+        <div>ghbvt</div>
     </>
   )
 }
