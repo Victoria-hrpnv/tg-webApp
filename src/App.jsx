@@ -18,8 +18,8 @@ function App() {
 
   return (
     <>
+        <div>Привет {firstName}</div>
       <Button>Привет!</Button>
-        <div>ghbvt</div>
     </>
   )
 }
