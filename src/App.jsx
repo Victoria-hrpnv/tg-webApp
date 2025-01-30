@@ -12,6 +12,7 @@ function App() {
 
 
     useEffect(()=> {
+        const Telegram = window.Telegram;
     if (Telegram && Telegram.WebApp) {
         const user = Telegram.WebApp.initDataUnsafe?.user || {};
         const theme = Telegram.WebApp.themeParams;
@@ -29,7 +30,8 @@ function App() {
           <pre>{JSON.stringify(themeParams, null, 2)}</pre>
           <p className={'privet'}>Привет, {firstName}</p>
           <Button className={'button'} >Привет!</Button>
-          <Avatar src={avatar} style={{ '--size': '40px', '--border-radius': '50%'  }} />
+          <Avatar src={avatar} style={{ '--size': '150px', '--border-radius': '50%'  }} />
+          <p>{avatar}</p>
       </>
   )
 }
