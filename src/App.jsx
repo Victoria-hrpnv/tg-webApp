@@ -21,7 +21,7 @@ function App() {
 
   return (
       <>
-          <pre>${JSON.stringify(themeParams, null, 2)}</pre>
+          <pre>{JSON.stringify(themeParams, null, 2)}</pre>
           <p>Привет {firstName}</p>
           <Button>Привет!</Button>
       </>
