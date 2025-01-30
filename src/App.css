@@ -1,3 +1,9 @@
+:root{
+--adm-color-background:var(--tg-theme-button-color);
+  --adm-color-text: var(--tg-theme-button-text-color);
+}
+
+
 #root {
   margin: 0 auto;
   padding: 2rem;
@@ -10,5 +16,9 @@
 
 body{
   background-color: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
+}
+
+.privet {
   color: var(--tg-theme-text-color);
 }
