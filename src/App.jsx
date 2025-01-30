@@ -6,6 +6,7 @@ function App() {
     const [username, setUsername] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
+    const [themeParams, setthemeParams] = useState('');
 
 
     useEffect(()=> {
@@ -14,13 +15,16 @@ function App() {
         setUsername(user.username || 'Неизвестный пользователь');
         setFirstName(user.first_name || '');
         setLastName(user.last_name || '');
+        const theme = Telegram.WebApp.themeParams;
+        setthemeParams(theme)
     }}, []);
 
   return (
-    <>
-        <div>Привет {firstName}</div>
-      <Button>Привет!</Button>
-    </>
+      <>
+          <pre>${JSON.stringify(themeParams, null, 2)}</pre>
+          <p>Привет {firstName}</p>
+          <Button>Привет!</Button>
+      </>
   )
 }
 
