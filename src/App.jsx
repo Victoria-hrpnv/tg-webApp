@@ -15,7 +15,7 @@ function App() {
     if (Telegram && Telegram.WebApp) {
         const user = Telegram.WebApp.initDataUnsafe?.user || {};
         const theme = Telegram.WebApp.themeParams;
-        setFirstName(user.first_name || 'false');
+        setFirstName(user.first_name || false);
         setThemeParams(theme);
     }}, []);
 
@@ -44,18 +44,19 @@ function App() {
 
   return (
       <>
-          <pre>{JSON.stringify(themeParams, null, 2)}</pre>
-          <h1 className={'privet'}>Привет, {firstName}</h1>
-          <h2>Курс BTC</h2>
+          {/*<pre>{JSON.stringify(themeParams, null, 2)}</pre>*/}
+          <h1 className={'tColor'}>Привет, {firstName}</h1>
+          <h2 className={'tColor'}>Курс BTC</h2>
           {data ? (
-              <p>{data.data.amount} RUB</p>
+              <p className={'tColor'}>{data.data.amount} RUB</p>
           ) : (
-              loading === 'true' ?  <p>Загрузка..</p> : <p>Нажмите, чтобы узнать</p>
+              loading  ?  <p className={'tColor'}>Загрузка..</p> : <p className={'tColor'}>Нажмите, чтобы узнать</p>
           )}
           <Button
               style={{
                   backgroundColor: 'var(--tg-theme-button-color)',
                   color: 'var(--tg-theme-button-text-color)',
+                  border: 'none'
               }}
               className={'button'}
               onClick={fetchBtc}>Узнать</Button>
