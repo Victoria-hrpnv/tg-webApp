@@ -1,5 +1,6 @@
 :root{
-  --border-radius: 50%
+  --border-radius: 50%;
+  --adm-color-text: var(--tg-theme-text-color);
 }
 
 
@@ -14,6 +15,8 @@
 }
 
 body{
+  display: flex;
+  flex-direction: column;
   background-color: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
 }
@@ -23,4 +26,8 @@ body{
 }
 .privet {
   color: var(--tg-theme-text-color);
+}
+
+.input{
+  --color: #fff;
 }
