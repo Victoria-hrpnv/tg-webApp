@@ -11,8 +11,13 @@ body{
   display: flex;
   flex-direction: column;
   background-color: var(--tg-theme-bg-color);
+
   color: var(--tg-theme-text-color);
 }
 .tColor {
   color: var(--tg-theme-text-color);
+}
+.div{
+  width: var(--tg-viewport-width);
+  margin: 0 auto;
 }
